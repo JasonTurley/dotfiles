@@ -26,7 +26,7 @@ filetype on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number            	" show line numbers
 set numberwidth=6       " make the number gutter 6 characters wide
-set cul                 " highlight current line
+"set cul                 " highlight current line
 set laststatus=2        " last window always has a statusline
 set nohlsearch          " Don't continue to highlight searched phrases
 set incsearch           " But do highlight as you type your search
@@ -39,7 +39,7 @@ set visualbell
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 03. Fonts and Colors
+" 03. Fonts and Colors							      "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set t_Co=256		" enable 256-color mode
@@ -57,7 +57,7 @@ au BufRead,BufNewFile *.ini
 " Pretty Markdown files
 augroup markdown
 	au!
-	au BufNewFile,BufRead *.md, *.markdown setlocal filetype=ghmarkdown
+	au BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
 augroup END
 
 
@@ -95,8 +95,8 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O<TAB>
 
-
-inoremap jj <Esc>	" remap jj to Escape key in insert mode
+" remap jj to Escape key in insert mode
+inoremap jj <Esc>	
 
 " Swap : and ; to avoid pressing the shift key
 noremap ; :
@@ -107,9 +107,3 @@ nnoremap <space> za
 
 " Enable code folding for classes and methods
 set foldmethod=indent
-
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z]]
