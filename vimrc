@@ -88,8 +88,8 @@ set mouse=a		" enable full mouse support
 map 0 ^			
 
 " IDE-like brace functionality
-"inoremap \" \""<left>
-"inoremap ' ''<left>
+inoremap \" \""<left>
+inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
@@ -103,7 +103,7 @@ noremap ; :
 noremap : ;
 
 " Enable code folding by pressing spacebar
-nnoremap <space> za
+"nnoremap <space> za
 
 " Enable code folding for classes and methods
-set foldmethod=indent
+"set foldmethod=indent
