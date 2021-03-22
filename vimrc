@@ -21,6 +21,11 @@ set nocompatible 	" get rid of Vi compatibility mode. SET FIRST!
 " Enable filetype detection - recommended to have Vi compatibility off
 filetype on
 
+" Open file at last read position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Vim UI								      "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,8 +70,6 @@ augroup END
 " 04. Text and Formatting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set autoindent		" enable auto-indent
-set smartindent		" enable smart indent
 set wrap		" wrap lines
 set smarttab
 
@@ -88,7 +91,7 @@ set mouse=a		" enable full mouse support
 map 0 ^			
 
 " IDE-like brace functionality
-inoremap \" \""<left>
+inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
