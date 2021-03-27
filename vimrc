@@ -49,7 +49,7 @@ set visualbell
 
 set t_Co=256		" enable 256-color mode
 syntax enable		" enable syntax highlighting
-colorscheme default	" set colorscheme
+colorscheme silenthill	" set colorscheme
 
 " Set encoding and language
 set encoding=utf-8
