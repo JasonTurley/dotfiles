@@ -16,7 +16,8 @@
 " 01. General								      "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set nocompatible 	" get rid of Vi compatibility mode. SET FIRST!
+" Get rid of Vi compatibility mode. SET FIRST!
+set nocompatible 	
 
 " Enable filetype detection - recommended to have Vi compatibility off
 filetype on
@@ -33,14 +34,13 @@ set number            	" show line numbers
 set numberwidth=6       " make the number gutter 6 characters wide
 "set cul                 " highlight current line
 set laststatus=2        " last window always has a statusline
-set nohlsearch          " Don't continue to highlight searched phrases
-set incsearch           " But do highlight as you type your search
-set ignorecase          " Make searches case-insensitive
-set ruler               " Always show info along bottom
+set nohlsearch          " don't continue to highlight searched phrases
+set incsearch           " highlight as you type your search
+set ignorecase          " case-insensitive searching
+set ruler               " always show info along bottom
 set showmatch		" show matching brackets when cursor is over them
 
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
-set visualbell
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -70,16 +70,16 @@ augroup END
 " 04. Text and Formatting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set wrap		" wrap lines
 set smarttab
 
 " Linux coding style guide recommends 8 character tabs
 set shiftwidth=8
 set tabstop=8
 
-" Linebreak on N characters
+" Wrap lines that are longer than 80 characters long
 set lbr
-set tw=80
+set textwidth=80
+set wrap		
 
 set mouse=a		" enable full mouse support
 
@@ -106,7 +106,7 @@ noremap ; :
 noremap : ;
 
 " Enable code folding by pressing spacebar
-"nnoremap <space> za
+nnoremap <space> za
 
 " Enable code folding for classes and methods
-"set foldmethod=indent
+set foldmethod=indent
