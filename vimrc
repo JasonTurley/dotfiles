@@ -49,7 +49,7 @@ set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%
 
 set t_Co=256		" enable 256-color mode
 syntax enable		" enable syntax highlighting
-colorscheme silenthill	" set colorscheme
+colorscheme Tomorrow-Night 
 
 " Set encoding and language
 set encoding=utf-8
