@@ -76,6 +76,13 @@ set smarttab
 set shiftwidth=8
 set tabstop=8
 
+" Set tabs to 4 characters when using Python
+augroup python
+	au!
+	au BufNewFile,BufRead *.py set shiftwidth=4
+	au BufNewFile,BufRead *.py set tabstop=4
+augroup END
+
 " Wrap lines that are longer than 80 characters long
 set lbr
 set textwidth=80
