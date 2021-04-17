@@ -32,15 +32,10 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number            	" show line numbers
 set numberwidth=6       " make the number gutter 6 characters wide
-"set cul                 " highlight current line
-set laststatus=2        " last window always has a statusline
 set nohlsearch          " don't continue to highlight searched phrases
 set incsearch           " highlight as you type your search
 set ignorecase          " case-insensitive searching
-set ruler               " always show info along bottom
 set showmatch		" show matching brackets when cursor is over them
-
-set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
