@@ -111,4 +111,4 @@ noremap : ;
 nnoremap <space> za
 
 " Enable code folding for classes and methods
-set foldmethod=indent
+"set foldmethod=indent
