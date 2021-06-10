@@ -44,7 +44,7 @@ set showmatch		" show matching brackets when cursor is over them
 
 set t_Co=256		" enable 256-color mode
 syntax enable		" enable syntax highlighting
-colorscheme Tomorrow-Night 
+colorscheme 0x7A69_dark
 
 " Set encoding and language
 set encoding=utf-8
