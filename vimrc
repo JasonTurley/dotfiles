@@ -50,24 +50,13 @@ colorscheme 0x7A69_dark
 set encoding=utf-8
 set spelllang=en_us
 
-" Disable spell checking for certain file types
-au BufRead,BufNewFile *.ini
-	\ set nospell
-
-" Pretty Markdown files
-augroup markdown
-	au!
-	au BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
-augroup END
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 04. Text and Formatting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set smarttab
 
-" Linux coding style guide recommends 8 character tabs
+" The Linux Coding Style Guide uses 8 character tabs
 set shiftwidth=8
 set tabstop=8
 
@@ -92,7 +81,7 @@ set mouse=a		" enable full mouse support
 " remap VIM 0 to first non-blank character
 map 0 ^			
 
-" IDE-like brace functionality
+" IDE-like closing quotes and braces functionality
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
@@ -106,9 +95,3 @@ inoremap jj <Esc>
 " Swap : and ; to avoid pressing the shift key
 noremap ; :
 noremap : ;
-
-" Enable code folding by pressing spacebar
-nnoremap <space> za
-
-" Enable code folding for classes and methods
-"set foldmethod=indent
