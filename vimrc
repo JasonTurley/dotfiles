@@ -54,11 +54,13 @@ set spelllang=en_us
 " 04. Text and Formatting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set autoindent			" use the indent from the previous line for the filetype you are editing
+set smartindent			" do smart autoindenting when adding a new line. Works for C-like programs.
 set smarttab
 
-" The Linux Coding Style Guide uses 8 character tabs
-set shiftwidth=8
-set tabstop=8
+" Set the tab length
+set shiftwidth=4
+set tabstop=4
 
 " Set tabs to 4 characters when using Python
 augroup python
@@ -67,9 +69,9 @@ augroup python
 	au BufNewFile,BufRead *.py set tabstop=4
 augroup END
 
-" Wrap lines that are longer than 80 characters long
+" Wrap lines 
 set lbr
-set textwidth=80
+set textwidth=100
 set wrap		
 
 set mouse=a		" enable full mouse support
