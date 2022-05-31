@@ -19,13 +19,15 @@
 " Get rid of Vi compatibility mode. SET FIRST!
 set nocompatible 	
 
-" Enable filetype detection - recommended to have Vi compatibility off
-filetype on
-
-" Open file at last read position
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-endif
+	" Enable filetype detection.
+	" Use the default filetype settings and do language-dependent indenting
+	filetype plugin indent on
+
+	" Open file at last read position
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+endif " has("autocmd")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Vim UI								      "
@@ -35,8 +37,11 @@ set numberwidth=6       " make the number gutter 6 characters wide
 set nohlsearch          " don't continue to highlight searched phrases
 set incsearch           " highlight as you type your search
 set ignorecase          " case-insensitive searching
-set showmatch		" show matching brackets when cursor is over them
+set showmatch			" show matching brackets when cursor is over them
 
+" Show a few lines of context around the cursor.  Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 03. Fonts and Colors							      "
@@ -54,26 +59,6 @@ set spelllang=en_us
 " 04. Text and Formatting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set autoindent			" use the indent from the previous line for the filetype you are editing
-set smartindent			" do smart autoindenting when adding a new line. Works for C-like programs.
-set smarttab
-
-" Set the tab length
-set shiftwidth=4
-set tabstop=4
-
-" Set tabs to 4 characters when using Python
-augroup python
-	au!
-	au BufNewFile,BufRead *.py set shiftwidth=4
-	au BufNewFile,BufRead *.py set tabstop=4
-augroup END
-
-" Wrap lines 
-set lbr
-set textwidth=100
-set wrap		
-
 set mouse=a		" enable full mouse support
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -89,11 +74,11 @@ inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O<TAB>
+inoremap {<CR> {<CR>}<ESC>O
 
 " remap jj to Escape key in insert mode
 inoremap jj <Esc>	
 
 " Swap : and ; to avoid pressing the shift key
-noremap ; :
-noremap : ;
+"noremap ; :
+"noremap : ;
