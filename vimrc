@@ -34,10 +34,10 @@ endif " has("autocmd")
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number            	" show line numbers
 set numberwidth=6       " make the number gutter 6 characters wide
-set nohlsearch          " don't continue to highlight searched phrases
+set hls			" highlight search
 set incsearch           " highlight as you type your search
 set ignorecase          " case-insensitive searching
-set showmatch			" show matching brackets when cursor is over them
+set showmatch		" show matching brackets when cursor is over them
 
 " Show a few lines of context around the cursor.  Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
@@ -49,7 +49,7 @@ set scrolloff=5
 
 set t_Co=256		" enable 256-color mode
 syntax enable		" enable syntax highlighting
-colorscheme 0x7A69_dark
+colorscheme aqua
 
 " Set encoding and language
 set encoding=utf-8
