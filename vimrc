@@ -65,6 +65,10 @@ set mouse=a		" enable full mouse support
 " 05. Edit mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" add timestamp - useful when penetration testing
+nmap <F5> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p -- ")
+imap <F5> <C-R>=strftime("%Y-%m-%d %a %I:%M %p -- ") 
+
 " remap VIM 0 to first non-blank character
 map 0 ^			
 
