@@ -33,6 +33,7 @@ endif " has("autocmd")
 " 02. Vim UI								      "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number            	" show line numbers
+set relativenumber	" show relative numbers
 set numberwidth=6       " make the number gutter 6 characters wide
 set hls			" highlight search
 set incsearch           " highlight as you type your search
@@ -49,7 +50,8 @@ set scrolloff=5
 
 set t_Co=256		" enable 256-color mode
 syntax enable		" enable syntax highlighting
-colorscheme aqua
+colorscheme gruvbox
+set background=dark
 
 " Set encoding and language
 set encoding=utf-8
@@ -82,7 +84,3 @@ inoremap {<CR> {<CR>}<ESC>O
 
 " remap jj to Escape key in insert mode
 inoremap jj <Esc>	
-
-" Swap : and ; to avoid pressing the shift key
-"noremap ; :
-"noremap : ;
